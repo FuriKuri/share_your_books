@@ -69,6 +69,14 @@ class UserTest < ActiveSupport::TestCase
     assert !user.save
   end
 
+  test "should not save user with a wrong email format" do
+    user = User.new
+    user.name = 'hans'
+    user.password = 'secret'
+    user.email = 'email.com'
+    assert !user.save
+  end
+
   # test "the truth" do
   #   assert true
   # end
