@@ -51,6 +51,24 @@ class UserTest < ActiveSupport::TestCase
     assert !user.save
   end
 
+  test "should not save user with too short password" do
+    user = User.new
+    user.name = 'hans'
+    user.password = 'pw'
+    user.email = 'user@email.com'
+    assert !user.save
+  end
+
+  test "should not save user with too long password" do
+    user = User.new
+    user.name = 'hans'
+    pw = ''
+    41.times {pw += 'p'}
+    user.password = pw
+    user.email = 'user@email.com'
+    assert !user.save
+  end
+
   # test "the truth" do
   #   assert true
   # end
