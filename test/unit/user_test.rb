@@ -77,6 +77,22 @@ class UserTest < ActiveSupport::TestCase
     assert !user.save
   end
 
+  test "should not save user with an existing name" do
+    user = User.new
+    user.name = 'user1'
+    user.password = 'secret'
+    user.email = 'user@email.com'
+    assert !user.save
+  end
+
+  test "should not save user with an existing email" do
+    user = User.new
+    user.name = 'hans'
+    user.password = 'secret'
+    user.email = 'user1@email.com'
+    assert !user.save
+  end
+
   # test "the truth" do
   #   assert true
   # end
