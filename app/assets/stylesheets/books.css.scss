@@ -1,3 +1,50 @@
 // Place all the styles related to the Books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.books {
+  table {
+    border-collapse: collapse;
+  }
+
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .list_description {
+    width: 60%;
+    dl {
+      marign: 0;
+    }
+
+    dt {
+      color: #224;
+      font-weight: bold;
+      font-size: larger;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+
+  .list_actions {
+    font-size: x-small;
+    text-align: right;
+    padding-left: 1em;
+  }
+
+  .list_image {
+    width: 60px;
+    height: 70px;
+  }
+
+  .list_line_odd {
+    background: #e0f8f8;
+  }
+
+  .list_line_even {
+    background: #a8b0f8;
+  }
+}
