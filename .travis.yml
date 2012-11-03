@@ -9,7 +9,7 @@ env:
 script: 
   - RAILS_ENV=test bundle exec rake --trace db:migrate
   - bundle exec rake db:test:prepare
-  - bundle exec rspec spec/
+  - bundle exec rake test
 before_script:
   - mysql -e 'create database share_your_books_test'
   - psql -c 'create database share_your_books_test' -U postgres
