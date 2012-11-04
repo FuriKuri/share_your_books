@@ -89,7 +89,7 @@ class UserTest < ActiveSupport::TestCase
     user = User.new
     user.name = 'hans'
     user.password = 'secret'
-    user.email = 'user1@email.com'
+    user.email = 'tim@email.com'
     assert user.invalid?
   end
 end
