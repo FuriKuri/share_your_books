@@ -79,7 +79,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "should not save user with an existing name" do
     user = User.new
-    user.name = 'user1'
+    user.name = 'tim'
     user.password = 'secret'
     user.email = 'user@email.com'
     assert user.invalid?
@@ -92,8 +92,4 @@ class UserTest < ActiveSupport::TestCase
     user.email = 'user1@email.com'
     assert user.invalid?
   end
-
-  # test "the truth" do
-  #   assert true
-  # end
 end
