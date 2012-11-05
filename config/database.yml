@@ -3,7 +3,7 @@ sqlite: &sqlite
   database: db/<%= Rails.env %>.sqlite3
 
 mysql: &mysql
-  adapter: mysql
+  adapter: mysql2
   username: root
   password:
   database: share_your_books_<%= Rails.env %>
