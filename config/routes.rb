@@ -1,4 +1,6 @@
 ShareYourBooks::Application.routes.draw do
+  resources :users
+
   get "home/index"
 
   get "home/login"
@@ -8,8 +10,6 @@ ShareYourBooks::Application.routes.draw do
   get "home/logout"
 
   resources :books
-
-  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
