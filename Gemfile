@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 gem 'mysql2'
+gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'sqlite3'
