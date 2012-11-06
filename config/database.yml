@@ -1,18 +1,18 @@
 sqlite: &sqlite
   adapter: sqlite3
-  database: db/<%= Rails.env %>.sqlite3
+  database: db/test.sqlite3
 
 mysql: &mysql
   adapter: mysql2
   username: root
   password:
-  database: share_your_books_<%= Rails.env %>
+  database: share_your_books_test
 
 postgresql: &postgresql
   adapter: postgresql
   username: postgres
   password:
-  database: share_your_books_<%= Rails.env %>
+  database: share_your_books_test
   min_messages: ERROR
 
 defaults: &defaults
@@ -21,11 +21,18 @@ defaults: &defaults
   host: localhost
   <<: *<%= ENV['DB'] || "sqlite" %>
 
-development:
-  <<: *defaults
-
 test:
   <<: *defaults
 
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
 production:
-  <<: *defaults
+  adapter: sqlite3
+  database: db/production.sqlite3
+  pool: 5
+  timeout: 5000
+
