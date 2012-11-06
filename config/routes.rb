@@ -1,4 +1,12 @@
 ShareYourBooks::Application.routes.draw do
+  get "home/index"
+
+  get "home/login"
+
+  get "home/register"
+
+  get "home/logout"
+
   resources :books
 
   resources :users
