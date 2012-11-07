@@ -3,6 +3,7 @@ require 'test_helper'
 class BooksControllerTest < ActionController::TestCase
   setup do
     @book = books(:clean_code)
+    login_as(:one)
   end
 
   test "should get index" do

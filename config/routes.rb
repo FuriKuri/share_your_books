@@ -1,13 +1,13 @@
 ShareYourBooks::Application.routes.draw do
+
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
   resources :users
-
-  get "home/index"
-
-  get "home/login"
-
-  get "home/register"
-
-  get "home/logout"
 
   resources :books
 
