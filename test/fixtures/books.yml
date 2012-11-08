@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 clean_code:
+  id: 1
   title: Clean Code
   description: A book about clean code.
   image_url: image.png
-  owner: dave
-  lent_to: dave
+  owner_id: 1
+  lent_to_user_id: 1
 
 java:
+  id: 2
   title: Java for Beginners
   description: Java book.
   image_url:
-  owner: dave
-  lent_to: tom
+  owner_id: 1
+  lent_to_user_id: 2
