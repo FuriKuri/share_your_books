@@ -43,7 +43,9 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(params[:book])
     @book.owner_id = session[:user_id]
-    @book.lent_to_user_id = session[:user_id]
+    unless @book.lent_to_user_id
+      @book.lent_to_user_id = session[:user_id]
+    end
 
     respond_to do |format|
       if @book.save
