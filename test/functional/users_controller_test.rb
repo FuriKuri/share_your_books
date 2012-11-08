@@ -7,7 +7,7 @@ class UsersControllerTest < ActionController::TestCase
       password: "private",
       password_confirmation: "private"
     }
-    @user = users(:one)
+    @user = users(:dave)
   end
 
   test "should get index" do
