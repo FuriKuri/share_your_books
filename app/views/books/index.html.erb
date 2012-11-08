@@ -12,6 +12,13 @@
 
     </td>
 
+    <td class="list_owners">
+      Owner:
+      <%= book.owner.name %> <br/>
+      Is lent to:
+      <%= book.lent_to.name %>
+    </td>
+
     <td class="list_actions">
       <%= link_to 'Show', book %> <br/>
       <%= link_to 'Edit', edit_book_path(book) %> <br/>

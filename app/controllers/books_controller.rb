@@ -42,6 +42,8 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(params[:book])
+    @book.owner_id = session[:user_id]
+    @book.lent_to_user_id = session[:user_id]
 
     respond_to do |format|
       if @book.save
