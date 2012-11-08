@@ -4,12 +4,12 @@ clean_code:
   title: Clean Code
   description: A book about clean code.
   image_url: image.png
-  owner_id: 1
-  lent_to_user_id: 1
+  owner: dave
+  lent_to: dave
 
 java:
   title: Java for Beginners
   description: Java book.
   image_url:
-  owner_id: 1
-  lent_to_user_id: 1
+  owner: dave
+  lent_to: tom
