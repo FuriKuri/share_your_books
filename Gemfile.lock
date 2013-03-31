@@ -119,6 +119,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   pg
+  rack
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   sqlite3

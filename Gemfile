@@ -24,3 +24,5 @@ end
 gem 'jquery-rails'
 
 gem 'thin'
+
+gem 'rack' 
